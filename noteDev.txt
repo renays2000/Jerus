@@ -1,0 +1,128 @@
+creation d'une table en base: 
+Table posts:
+php artisan make:migration create_posts_table
+completer le fichier CreatePostsTable  generer dans database/migrations avec les champs de la table
+Lancez la migration : php artisan migrate
+
+commande d'Artisan pour lancer la population des table seeder: php artisan db:seed
+Si vous avez un message vous disant que la classe userTableSeeder, ou l'autre classe, n'est pas trouvée effectuez la commande "composer dumpautoload", puis relancez la population.
+
+ visualiser les routes (php artisan route:list) 
+ 
+ Creation dun middleware Admin: php artisan make:middleware Admin
+ 
+créer une requête de formulaire : php artisan make:request PostRequest
+
+ Laravel utilise un cache pour les vue en storage/framework/views. Vous pouvez sans problème supprimer tous les fichiers (mais pas .gitignore !) pour obliger Laravel à générer de nouvelles vues. 
+ 
+ Laravel propose de nombreuses façades pour simplifier la syntaxe. Vous pouvez les trouver toutes déclarées dans le fichier config/app.php
+ 
+ le composant Html : aller modifier ainsi le fichier composer.json
+ 
+ Declarer une interface:
+ Ouvrez le fichier app\Providers\AppServiceProvider.php et ajoutez cette ligne de code :
+
+<?php 
+public function register()
+{
+    ...
+
+    $this->app->bind(
+        'App\Gestion\PhotoGestionInterface', 
+        'App\Gestion\PhotoGestion'
+    );
+}
+php artisan clear-compiled
+
+On va maintenant créer une ressource avec Artisan :
+C:\wamp\www\tuto>php artisan make:controller UserController
+
+### Installation ###
+
+* `git clone https://github.com/bestmomo/laravel5-example.git projectname`
+* `cd projectname`
+* `composer install`
+* `php artisan key:generate`
+* Create a database and inform *.env*
+* `php artisan migrate --seed` to create and populate tables
+* Inform *config/mail.php* for email sends
+* `php artisan vendor:publish` to publish filemanager
+
+### MODEL ###
+ Articles
+	idArticle
+ Annonces
+	 idAnnonce
+	 titreAnnonce
+	 Description
+	 Date_publication
+	 Prix
+	 Rang
+	 Validité
+	 idUser
+	 idLocalisation
+	 idTypeAnnonce
+	 idCategorie
+Categories
+	idCategorie
+	libelle
+	idThematique
+Thematiques
+	idThematique
+	libelle
+Attributs
+	idAttribut
+	libelle
+Valeurs
+	idAnnonce
+	idCategorie
+	idAttribut
+	valeur
+TypeAnnonces
+	idTypeAnnonce
+	libelle
+Localisations
+	idLocalisation
+	Adresse
+	Ville
+	Departement
+	Region
+Users
+	idUser
+	Nom
+	Prenom
+	Téléphone
+	Email
+	Password
+	pseudo
+	admin
+Mails
+	idMail
+	mail
+Notations
+	idNotation
+	libelle
+Commentaires
+	idCommentaire
+	contenu
+	moderation
+	publie
+	idArticle
+Images
+	idImage
+	url
+	alt
+	idAnnonce
+ 	
+php artisan make:migration create_TypeAnnonces_table	
+php artisan make:migration create_Localisations_table	
+php artisan make:migration create_Users_table	
+php artisan make:migration create_Mails_table	
+php artisan make:migration create_Notations_table	
+php artisan make:migration create_Commentaires_table	
+php artisan make:migration create_Images_table	
+php artisan make:migration create_Articles_table
+php artisan make:migration create_Annonces_table
+php artisan make:migration create_Categories_table
+php artisan make:migration create_Thematiques_table
+php artisan make:migration create_Attributs_table

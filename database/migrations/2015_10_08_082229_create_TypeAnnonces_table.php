@@ -3,16 +3,19 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class CreateTypeAnnoncesTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+public function up()
     {
-        //
+    	Schema::create('typeAnnonces', function(Blueprint $table) {
+    		$table->increments('idTypeAnnonce');
+    		$table->string('libelle', 100);
+    	});
     }
 
     /**
@@ -22,6 +25,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        //
+    	Schema::drop('typeAnnonces');
     }
 }

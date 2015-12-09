@@ -22,14 +22,14 @@ btn-info pull-right']) !!} @endif @stop @section('contenu')
 		<section>
 			<p>{{ $post->contenu }}</p>
 			@if(Auth::check() and Auth::user()->admin) 
-			{!! Form::open(['method'=> 'DELETE', 'route' => ['post.destroy', $post->id]]) !!} 
+			{!! Form::open(['method'=> 'DELETE', 'route' => ['post.destroy', $post->idPost]]) !!} 
 			{!!	Form::submit('Supprimer cet article', ['class' => 'btn btn-danger
 			btn-xs ', 'onclick' => 'return confirm(\'Vraiment supprimer cet
 			article ?\')'])!!} 
 			{!! Form::close() !!} 
 			@endif <em
 				class="pull-right"> <span class="glyphicon glyphicon-pencil"></span>
-				{{ $post->user->name }} le {!! $post->created_at->format('d-m-Y')
+				{{ $post->user->nom }} le {!! $post->created_at->format('d-m-Y')
 				!!}
 			</em>
 		</section>

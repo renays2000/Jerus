@@ -5,7 +5,7 @@
   </head>
   <body>
     <h2>Prise de contact sur mon beau site</h2>
-    <p>Réception d'une prise de contact avec les éléments suivants :</p>
+    <p>RÃ©ception d'une prise de contact avec les Ã©lÃ©ments suivants :</p>
     <ul>
       <li><strong>Nom</strong> : {{ $nom }}</li>
       <li><strong>Email</strong> : {{ $email }}</li>

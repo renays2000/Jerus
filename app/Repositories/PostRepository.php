@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Post;
+use App\Models\Post;
 
 class PostRepository {
 	protected $post;

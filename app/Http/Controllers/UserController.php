@@ -23,34 +23,34 @@ class UserController extends Controller {
 		$users = $this->userRepository->getPaginate ( $this->nbrPerPage );
 		$links = $users->setPath ( '' )->render ();
 		
-		return view ( 'index', compact ( 'users', 'links' ) );
+		return view ( 'users.index', compact ( 'users', 'links' ) );
 	}
 	public function create() {
-		return view ( 'create' );
+		return view ( 'users.create' );
 	}
 	public function store(UserCreateRequest $request) {
 		$this->setAdmin ( $request );
 		
 		$user = $this->userRepository->store ( $request->all () );
 		
-		return redirect ( 'user' )->withOk ( "L'utilisateur " . $user->name . " a été créé." );
+		return redirect ( 'user' )->withOk ( "L'utilisateur " . $user->nom . " a été créé." );
 	}
 	public function show($id) {
 		$user = $this->userRepository->getById ( $id );
 		
-		return view ( 'show', compact ( 'user' ) );
+		return view ( 'users.show', compact ( 'user' ) );
 	}
 	public function edit($id) {
 		$user = $this->userRepository->getById ( $id );
 		
-		return view ( 'edit', compact ( 'user' ) );
+		return view ( 'users.edit', compact ( 'user' ) );
 	}
 	public function update(UserUpdateRequest $request, $id) {
 		$this->setAdmin ( $request );
 		
 		$this->userRepository->update ( $id, $request->all () );
 		
-		return redirect ( 'user' )->withOk ( "L'utilisateur " . $request->input ( 'name' ) . " a été modifié." );
+		return redirect ( 'user' )->withOk ( "L'utilisateur " . $request->input ( 'nom' ) . " a été modifié." );
 	}
 	public function destroy($id) {
 		$this->userRepository->destroy ( $id );

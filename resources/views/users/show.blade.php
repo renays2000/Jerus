@@ -4,7 +4,7 @@
 	<div class="panel panel-primary">
 		<div class="panel-heading">Fiche d'utilisateur</div>
 		<div class="panel-body">
-			<p>Nom : {{ $user->name }}</p>
+			<p>Nom : {{ $user->nom }}</p>
 			<p>Email : {{ $user->email }}</p>
 			@if($user->admin == 1) Administrateur @endif
 		</div>

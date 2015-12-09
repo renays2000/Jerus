@@ -9,7 +9,7 @@ class ContactController extends Controller {
 
     public function getForm()
 	{
-		return view('contact');
+		return view('contact.contact');
 	}
 
 	public function postForm(ContactRequest $request)
@@ -19,7 +19,7 @@ class ContactController extends Controller {
 			$message->to('barou2015@free.fr')->subject('Contact');
 		});
 
-		return view('confirm');
+		return view('contact.confirm');
 	}
 
 }

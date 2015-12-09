@@ -7,7 +7,10 @@ Lancez la migration : php artisan migrate
 commande d'Artisan pour lancer la population des table seeder: php artisan db:seed
 Si vous avez un message vous disant que la classe userTableSeeder, ou l'autre classe, n'est pas trouvée effectuez la commande "composer dumpautoload", puis relancez la population.
 
- visualiser les routes (php artisan route:list) 
+Creation d'un model avec Eloquent :
+php artisan make:model Models\Annonces
+
+visualiser les routes (php artisan route:list) 
  
  Creation dun middleware Admin: php artisan make:middleware Admin
  
@@ -48,13 +51,15 @@ C:\wamp\www\tuto>php artisan make:controller UserController
 * Inform *config/mail.php* for email sends
 * `php artisan vendor:publish` to publish filemanager
 
+
+Vapp
 ### MODEL ###
  Articles
 	idArticle
  Annonces
 	 idAnnonce
-	 titreAnnonce
-	 Description
+	 titre
+	 description
 	 Date_publication
 	 Prix
 	 Rang
@@ -89,11 +94,11 @@ Localisations
 	Region
 Users
 	idUser
-	Nom
-	Prenom
-	Téléphone
-	Email
-	Password
+	nom
+	prenom
+	telephone
+	email
+	password
 	pseudo
 	admin
 Mails

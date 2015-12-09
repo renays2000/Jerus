@@ -1,10 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model {
+	
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'posts';
+	
 	protected $fillable = [ 
 			'titre',
 			'contenu',
@@ -14,6 +22,6 @@ class Post extends Model {
 	];
 	public $timestamps = true;
 	public function user() {
-		return $this->belongsTo ( 'App\User' );
+		return $this->belongsTo ( 'App\Models\User' );
 	}
 }

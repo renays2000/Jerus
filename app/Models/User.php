@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -57,6 +57,6 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
 	 */
 	public function posts() {
-		return $this->hasMany ( 'App\Post' );
+		return $this->hasMany ( 'App\Models\Post' );
 	}
 }

@@ -4,7 +4,7 @@
     <br>
     <div class="col-sm-offset-4 col-sm-4">
 		<div class="panel panel-info">
-			<div class="panel-heading">Inscription à la lettre d'information</div>
+			<div class="panel-heading">Inscription Ã  la lettre d'information</div>
 			<div class="panel-body"> 
 				{!! Form::open(array('url' => 'email/form')) !!}
 					<div class="form-group {!! $errors->has('email') ? 'has-error' : '' !!}">

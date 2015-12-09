@@ -6,7 +6,7 @@
 		<div class="panel panel-info">
 			<div class="panel-heading">Contactez-moi</div>
 			<div class="panel-body"> 
-				Merci. Votre message a été transmis à l'administrateur du site. Vous recevrez une réponse rapidement.
+				Merci. Votre message a Ã©tÃ© transmis Ã  l'administrateur du site. Vous recevrez une rÃ©ponse rapidement.
 			</div>
 		</div>
 	</div>

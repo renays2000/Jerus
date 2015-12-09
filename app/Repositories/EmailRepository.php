@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Email;
+use App\Models\Email;
 
 class EmailRepository implements EmailRepositoryInterface
 {

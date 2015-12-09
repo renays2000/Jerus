@@ -5,12 +5,12 @@
 		<div class="panel-heading">Modification d'un utilisateur</div>
 		<div class="panel-body">
 			<div class="col-sm-12">
-				{!! Form::model($user, ['route' => ['user.update', $user->id],
+				{!! Form::model($user, ['route' => ['user.update', $user->idUser],
 				'method' => 'put', 'class' => 'form-horizontal panel']) !!}
 				<div
-					class="form-group {!! $errors->has('name') ? 'has-error' : '' !!}">
-					{!! Form::text('name', null, ['class' => 'form-control',
-					'placeholder' => 'Nom']) !!} {!! $errors->first('name', '<small
+					class="form-group {!! $errors->has('nom') ? 'has-error' : '' !!}">
+					{!! Form::text('nom', null, ['class' => 'form-control',
+					'placeholder' => 'Nom']) !!} {!! $errors->first('nom', '<small
 						class="help-block">:message</small>') !!}
 				</div>
 				<div

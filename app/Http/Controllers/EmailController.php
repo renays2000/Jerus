@@ -10,7 +10,7 @@ class EmailController extends Controller
 
     public function getForm()
 	{
-		return view('email');
+		return view('emails.email');
 	}
 
 	public function postForm(
@@ -19,7 +19,7 @@ class EmailController extends Controller
 	{
 		$emailRepository->save($request->input('email'));
 		
-		return view('email_ok');
+		return view('emails.email_ok');
 	}
 
 }

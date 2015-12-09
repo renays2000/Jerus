@@ -23,12 +23,12 @@
 				<tbody>
 					@foreach ($users as $user)
 						<tr>
-							<td>{!! $user->id !!}</td>
-							<td class="text-primary"><strong>{!! $user->name !!}</strong></td>
-							<td>{!! link_to_route('user.show', 'Voir', [$user->id], ['class' => 'btn btn-success btn-block']) !!}</td>
-							<td>{!! link_to_route('user.edit', 'Modifier', [$user->id], ['class' => 'btn btn-warning btn-block']) !!}</td>
+							<td>{!! $user->idUser !!}</td>
+							<td class="text-primary"><strong>{!! $user->nom !!}</strong></td>
+							<td>{!! link_to_route('user.show', 'Voir', [$user->idUser], ['class' => 'btn btn-success btn-block']) !!}</td>
+							<td>{!! link_to_route('user.edit', 'Modifier', [$user->idUser], ['class' => 'btn btn-warning btn-block']) !!}</td>
 							<td>
-								{!! Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->id]]) !!}
+								{!! Form::open(['method' => 'DELETE', 'route' => ['user.destroy', $user->idUser]]) !!}
 									{!! Form::submit('Supprimer', ['class' => 'btn btn-danger btn-block', 'onclick' => 'return confirm(\'Vraiment supprimer cet utilisateur ?\')']) !!}
 								{!! Form::close() !!}
 							</td>

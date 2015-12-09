@@ -29,7 +29,7 @@ class PostController extends Controller {
 	}
 	public function store(PostRequest $request) {
 		$inputs = array_merge ( $request->all (), [ 
-				'user_id' => $request->user ()->id 
+				'idUser' => $request->user ()->idUser 
 		] );
 		
 		$this->postRepository->store ( $inputs );

@@ -3,3 +3,30 @@
 .test{
 	font-style: italic;
 }
+footer .container {
+    background-color: #416177;
+/*     padding: 30px 0 27px 0; */
+}
+footer ul {
+    text-align: center;
+    padding-bottom: 20px !important;
+}
+footer ul li {
+    list-style: none;
+    display: inline-block;
+}
+footer ul li a:link, footer ul li a:visited {
+    color: white;
+    text-decoration: none;
+}
+footer ul li a {
+    display: block;
+    text-align: center;
+/*     font-size: 1.4em; */
+    padding: 0 10px;
+    border-right: 1px solid #809cad;
+    color: white;
+}
+footer ul li a.last {
+    border: none;
+}

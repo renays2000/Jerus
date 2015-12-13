@@ -6,7 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jerus Group - Immobilier et services</title> 
 {!! Html::style('bootstrap/css/bootstrap.min.css') !!} 
-{!! Html::style('bootstrap/css/bootstrap-theme.min.css') !!} 
+{!! Html::style('bootstrap/css/bootstrap-theme.min.css') !!}
+{!! Html::style('bootstrap/css/sticky-footer-navbar.css') !!} 
 {!! Html::style('custom/style.css') !!}
 <!-- 		{!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css') !!} -->
 <!--[if lt IE 9]>
@@ -55,6 +56,21 @@ textarea {
 		</nav>
 		@yield('contenu')
 	</div>
+	<footer class="footer">
+      <div class="container">
+        <div class="row">
+		<div class="col-xs-offset-2 col-xs-8">
+			<ul>
+			<li><a href="#">Qui sommes nous</a></li>
+			<li><a href="#">Coordonnées</a></li>
+			<li><a href="#">Régie publicitaire</a></li>
+			<li><a href="#">Plan du site</a></li>
+			<li><a href="#" class="last">Mentions légales</a></li>
+		</ul>
+		</div>
+	</div>
+      </div>
+    </footer>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -4,14 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 class CreatePostsTable extends Migration {
 	public function up() {
 		Schema::create ( 'posts', function (Blueprint $table) {
-			$table->increments ( 'idPost' );
+			$table->increments ( 'id' );
 			$table->timestamps ();
 			$table->string ( 'titre', 80 );
 			$table->text ( 'contenu' );
 			$table->boolean ( 'actif' )->default ( true );
 			$table->integer ( 'rang' );
 			$table->integer ( 'idUser' )->unsigned ();
-			$table->foreign ( 'idUser' )->references ( 'idUser' )->on ( 'users' )->onDelete ( 'restrict' )->onUpdate ( 'restrict' );
+			$table->foreign ( 'idUser' )->references ( 'id' )->on('users')
+						->onDelete('restrict')
+						->onUpdate('restrict');
 		} );
 	}
 	public function down() {

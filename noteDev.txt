@@ -14,7 +14,7 @@ visualiser les routes (php artisan route:list)
  
  Creation dun middleware Admin: php artisan make:middleware Admin
  
-créer une requête de formulaire : php artisan make:request PostRequest
+créer une requête de formulaire : php artisan make:request TypeAnnonceRequest 
 
  Laravel utilise un cache pour les vue en storage/framework/views. Vous pouvez sans problème supprimer tous les fichiers (mais pas .gitignore !) pour obliger Laravel à générer de nouvelles vues. 
  

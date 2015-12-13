@@ -1,5 +1,5 @@
-@extends('template')
+@extends('front\template')
 
-@section('contenu')
+@section('contenuFront')
 <div class="alert alert-success alert-dismissible">Welcome</div>
 @stop

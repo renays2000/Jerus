@@ -18,7 +18,7 @@ class Post extends Model {
 			'contenu',
 			'actif',
 			'rang',
-			'user_id' 
+			'idUser' 
 	];
 	public $timestamps = true;
 	public function user() {

@@ -13,5 +13,14 @@ class Thematique extends Model
 	 */
 	protected $table = 'thematiques';
 	
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+			'libelle'
+	];
+	
 	public $timestamps = false;
 }

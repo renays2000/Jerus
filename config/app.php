@@ -112,6 +112,7 @@ return [
 				/*
 				 * Laravel Framework Service Providers...
 				 */
+    			App\Providers\HelperServiceProvider::class,
 				Bestmomo\Scafold\ScafoldServiceProvider::class,
 				Collective\Html\HtmlServiceProvider::class,
 				Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
@@ -161,6 +162,7 @@ return [
 
     'aliases' => [ 
 				
+    			'Menu' => App\Helpers\Menu::class,
 				'App' => Illuminate\Support\Facades\App::class,
 				'Artisan' => Illuminate\Support\Facades\Artisan::class,
 				'Auth' => Illuminate\Support\Facades\Auth::class,

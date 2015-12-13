@@ -13,5 +13,19 @@ class Categorie extends Model
 	 */
 	protected $table = 'categories';
 	
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+			'libelle',
+			'idThematique'
+	];
+	
 	public $timestamps = false;
+	
+	public function user() {
+		return $this->belongsTo ( 'App\Models\Thematique' );
+	}
 }

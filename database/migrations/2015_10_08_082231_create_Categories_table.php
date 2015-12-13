@@ -13,15 +13,13 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
     	Schema::create ( 'categories', function (Blueprint $table) {
-			$table->increments ( 'idCategorie' );
+			$table->increments ( 'id' );
 			$table->string ( 'libelle', 80 );
 			$table->integer ( 'idThematique' )->unsigned ();
-			} );
-    	Schema::table('categories', function(Blueprint $table) {
-			$table->foreign('idThematique')->references('idThematique')->on('thematiques')
+			$table->foreign('idThematique')->references('id')->on('thematiques')
 						->onDelete('restrict')
 						->onUpdate('restrict');
-		});
+			} );
 	}
 
 	/**

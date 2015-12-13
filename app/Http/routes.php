@@ -10,9 +10,9 @@
  * | and give it the controller to call when that URI is requested.
  * |
  */
-Route::get ( '/', function () {
-	return view ( 'welcome' );
-} );
+Route::get ( '/',array('as' => 'welcome', function () {
+	return view ( 'front\welcome' );
+} ));
 Route::resource ( 'user', 'UserController' );
 Route::controller ( 'contact', 'ContactController' );
 Route::controller ( 'email', 'EmailController' );
@@ -22,4 +22,12 @@ Route::resource ( 'post', 'PostController', [
 				'edit',
 				'update' 
 		] 
+] );
+
+Route::resource ( 'typeAnnonce', 'TypeAnnonceController', [
+		'except' => [
+				'show',
+				'edit',
+				'update'
+		]
 ] );

@@ -3,18 +3,18 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateThematiquesTable extends Migration
+class CreateRegionTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
- public function up()
+public function up()
     {
-    	Schema::create('thematiques', function(Blueprint $table) {
+        Schema::create('regions', function(Blueprint $table) {
     		$table->increments('id');
-    		$table->string('libelle', 100);
+    		$table->string('nom', 300);
     	});
     }
 
@@ -25,6 +25,6 @@ class CreateThematiquesTable extends Migration
      */
     public function down()
     {
-    	Schema::drop('thematiques');
+        Schema::drop('regions');
     }
 }

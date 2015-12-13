@@ -1,7 +1,7 @@
-@extends('app')
+@extends('template')
 
-@section('content')
-<div class="container-fluid">
+@section('contenu')
+<!-- <div class="container-fluid"> -->
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
@@ -58,4 +58,5 @@
 		</div>
 	</div>
 </div>
-@endsection
+@stop
+<!-- @endsection -->

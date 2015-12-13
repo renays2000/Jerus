@@ -13,5 +13,14 @@ class TypeAnnonce extends Model
 	 */
 	protected $table = 'typeAnnonces';
 	
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+			'libelle'
+	];
+	
 	public $timestamps = false;
 }

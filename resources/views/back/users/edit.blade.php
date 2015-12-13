@@ -1,11 +1,11 @@
-@extends('template') @section('contenu')
-<div class="col-sm-offset-4 col-sm-4">
-	<br>
+@extends('users.template')
+
+@section('contenuUser')
 	<div class="panel panel-primary">
 		<div class="panel-heading">Modification d'un utilisateur</div>
 		<div class="panel-body">
 			<div class="col-sm-12">
-				{!! Form::model($user, ['route' => ['user.update', $user->idUser],
+				{!! Form::model($user, ['route' => ['user.update', $user->id],
 				'method' => 'put', 'class' => 'form-horizontal panel']) !!}
 				<div
 					class="form-group {!! $errors->has('nom') ? 'has-error' : '' !!}">

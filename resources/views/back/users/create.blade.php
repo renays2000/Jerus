@@ -1,6 +1,6 @@
-@extends('template') @section('contenu')
-<div class="col-sm-offset-4 col-sm-4">
-	<br>
+@extends('users.template')
+
+@section('contenuUser')
 	<div class="panel panel-primary">
 		<div class="panel-heading">Création d'un utilisateur</div>
 		<div class="panel-body">

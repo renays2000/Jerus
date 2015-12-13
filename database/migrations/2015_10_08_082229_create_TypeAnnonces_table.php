@@ -13,7 +13,7 @@ class CreateTypeAnnoncesTable extends Migration
 public function up()
     {
     	Schema::create('typeAnnonces', function(Blueprint $table) {
-    		$table->increments('idTypeAnnonce');
+    		$table->increments('id');
     		$table->string('libelle', 100);
     	});
     }
